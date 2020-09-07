@@ -55,7 +55,6 @@ class Results extends Component {
                         <a
                           href={result.link}
                           className="btn badge-pill btn-outline-dark mt-3"
-                          target="_blank"
                         >
                           View
                         </a>

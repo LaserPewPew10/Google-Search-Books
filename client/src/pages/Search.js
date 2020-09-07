@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Form from "../components/Form";
 import Results from "../components/Results";
 import API from "../utils/API";
+import { query } from "express";
 
 class Search extends Component {
   state = {
@@ -24,8 +25,8 @@ class Search extends Component {
     };
   };
 
-  searchBook = () => {
-    API.getBook()
+  searchBook = (query) => {
+    API.getBook(query)
       .then((res) =>
         this.setState({
           books: res.data.items.map((bookData) => this.makeBook(bookData)),
