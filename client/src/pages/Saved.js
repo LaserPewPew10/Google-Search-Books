@@ -8,7 +8,7 @@ class Saved extends Component {
   };
 
   componentDidMount() {
-    API.savedBooks()
+    API.getSavedBooks()
       .then((savedBooks) => this.setState({ savedBooks: savedBooks }))
       .catch((err) => console.error(err));
   }
